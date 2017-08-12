@@ -2,3 +2,20 @@ html,
 body {
   font-family: 'Lato', sans-serif;
 }
+
+main {
+  padding: 4em;
+}
+
+sup {
+  position: relative;
+  top: -0.2em;
+  font-size: 80%;
+  // margin-left: -0.3em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

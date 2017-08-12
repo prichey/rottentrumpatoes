@@ -1,5 +1,5 @@
 {
-  "name": "FIXME",
+  "name": "donaldtrumpisaspopularasthismovie",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -12,12 +12,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-preset-es2015": "^6.24.1",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "dirty": "^1.1.0",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
+    "moment": "^2.18.1",
+    "node-schedule": "^1.2.4",
     "npm-run-all": "^4.0.2",
     "path": "^0.12.7",
     "pug": "^2.0.0-beta11"

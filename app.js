@@ -5,11 +5,13 @@ if (fs.existsSync('.env')) {
 
 const express = require('express');
 const app = express();
-const bodyParser= require('body-parser');
+const bodyParser = require('body-parser');
 
 const path = require('path');
 
 const index = require('./routes/index');
+
+require('./lib/trump')();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
