@@ -6,6 +6,11 @@ const bodyParser = require('body-parser');
 
 const path = require('path');
 
+const approvalDb = low('db/approval.json');
+approvalDb.defaults({}).write();
+const moviesDb = low('db/movies.json');
+moviesDb.defaults(getPlaceholderObj()).write();
+
 require('./lib/trump')();
 // require('./lib/movie')();
 
