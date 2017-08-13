@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  div.container
+    h2= `Scraping pages ${pageFrom} to ${pageTo}.`
+    pre.log-wrap
+      ul.log
+
+block scripts
+  script(src='/js/lib/jquery.min.js')
+  script(src='/js/scrape.bundle.js')

@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
+
+require('../lib/trump')();
+// require('../lib/movie')();
+
 const approvalDb = low('db/approval.json');
 const moviesDb = low('db/movies.json');
-
 function getRandomMovieWithRating(rating) {
   const movies = moviesDb.get(rating).value();
   return movies[Math.floor(Math.random() * movies.length)];
@@ -11,7 +14,6 @@ function getRandomMovieWithRating(rating) {
 
 router.get('/', function(req, res) {
   const ratingObj = approvalDb.get('rating').value();
-  console.log(ratingObj);
   const rating = parseInt(ratingObj.val);
   const movie = getRandomMovieWithRating(rating);
 
