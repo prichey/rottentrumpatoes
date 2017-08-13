@@ -8,7 +8,7 @@ const path = require('path');
 
 const index = require('./routes/index');
 
-// require('./lib/trump')();
+require('./lib/trump')();
 // require('./lib/movie')();
 
 app.set('views', path.join(__dirname, 'views'));
