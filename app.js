@@ -11,6 +11,7 @@ const path = require('path');
 const low = require('lowdb');
 
 require('./lib/db').init();
+require('./lib/trump').init();
 
 const index = require('./routes/index');
 const scrape = require('./routes/scrape');
