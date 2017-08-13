@@ -11,11 +11,16 @@ function formatDataLog(str) {
   )}]</span> <span class='data'>${str}</span></li>`;
 }
 
+function scrollToBottom() {
+  $htmlBody.stop(); // stop current animation, if any
+  $htmlBody.animate({ scrollTop: $(document).height() });
+}
+
 function run() {
   io.init();
   socket.on('new_msg', function(data) {
     $log.append(formatDataLog(data.msg));
-    $htmlBody.animate({ scrollTop: $(document).height() });
+    scrollToBottom();
   });
   console.log('scrape');
 }
