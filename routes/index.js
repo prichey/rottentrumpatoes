@@ -11,6 +11,7 @@ function getRandomMovieWithRating(rating) {
 
 router.get('/', function(req, res) {
   const ratingObj = approvalDb.get('rating').value();
+  console.log(ratingObj);
   const rating = parseInt(ratingObj.val);
   const movie = getRandomMovieWithRating(rating);
 
