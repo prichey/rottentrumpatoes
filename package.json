@@ -22,9 +22,13 @@
     "express": "^4.15.2",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
+    "limits.js": "^0.1.4",
+    "lowdb": "^0.16.2",
     "moment": "^2.18.1",
+    "moviedb": "^0.2.8",
     "node-schedule": "^1.2.4",
     "npm-run-all": "^4.0.2",
+    "omdb": "^0.8.0",
     "path": "^0.12.7",
     "pug": "^2.0.0-beta11"
   },

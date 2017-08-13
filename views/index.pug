@@ -17,6 +17,10 @@ html
   body
     main
       div.container
-        h3 Donald Trump currently has an approval rating of #{rating.val}%#[sup  #[a *]].
+        div.row
+          h3 Donald Trump currently has an approval rating of #{rating}%#[sup  #[a *]].
+        div.row
+          img.poster(src=movie.posterUrl)
+          h4 That's the same as #{movie.title} (#{movie.year}).
     script(src='js/lib/jquery.min.js')
     script(src='js/main.bundle.js')

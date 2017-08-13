@@ -1,15 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const dirty = require('dirty');
-const db = dirty('rating.db');
+const low = require('lowdb');
+const approvalDb = low('db/approval.json');
+const movieDb = low('db/movies.json');
 
-db.on('load', function() {
-  router.get('/', function(req, res) {
-    const rating = db.get('rating');
+const rating = parseInt(approvalDb.get('rating').value().val);
 
-    res.render('index', {
-      rating: rating
-    });
+function getRandomMovieWithRating(rating) {
+  const movies = movieDb.get(rating).value();
+  return movies[Math.floor(Math.random() * movies.length)];
+}
+
+router.get('/', function(req, res) {
+  const movie = getRandomMovieWithRating(rating);
+
+  res.render('index', {
+    rating: rating,
+    movie: movie
   });
 });
 

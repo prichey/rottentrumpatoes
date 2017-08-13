@@ -1,7 +1,4 @@
-const fs = require('fs');
-if (fs.existsSync('.env')) {
-  require('dotenv').config();
-}
+require('dotenv').config();
 
 const express = require('express');
 const app = express();
@@ -11,7 +8,8 @@ const path = require('path');
 
 const index = require('./routes/index');
 
-require('./lib/trump')();
+// require('./lib/trump')();
+// require('./lib/movie')();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
