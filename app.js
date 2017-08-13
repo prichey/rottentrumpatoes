@@ -6,10 +6,10 @@ const bodyParser = require('body-parser');
 
 const path = require('path');
 
-const index = require('./routes/index');
-
 require('./lib/trump')();
 // require('./lib/movie')();
+
+const index = require('./routes/index');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
