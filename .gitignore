@@ -1,6 +1,6 @@
 .env
 .DS_Store
+*.log
 node_modules/
 .node-persist/
-*.log
-db/*.json
+tmp/
