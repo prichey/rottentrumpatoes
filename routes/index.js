@@ -2,10 +2,13 @@ const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
 
-const approval = require('../lib/trump');
+const approval = require('../lib/approval');
 
-let approvalDb = low('db/approval.json');
-let moviesDb = low('db/movies.json');
+const approvalDbPath = './tmp/approval.json';
+const moviesDbPath = './movies.json';
+
+let approvalDb = low(approvalDbPath);
+let moviesDb = low(moviesDbPath);
 
 function getRandomMovieWithRating(rating) {
   const movies = moviesDb.get(rating).value();
@@ -13,8 +16,9 @@ function getRandomMovieWithRating(rating) {
 }
 
 router.get('/', function(req, res) {
-  approvalDb = low('db/approval.json'); // refresh db
-  moviesDb = low('db/movies.json'); // refresh db
+  // refresh dbs
+  approvalDb = low(approvalDbPath);
+  moviesDb = low(moviesDbPath);
 
   try {
     const ratingObj = approvalDb.get('rating').value();
@@ -36,17 +40,6 @@ router.get('/', function(req, res) {
       res.render('500', {
         error: `couldn't find current rating :(`
       });
-      // approval
-      //   .asyncUpdateApprovalRating()
-      //   .then(() => {
-      //     // reload. this is dumb
-      //     res.redirect('/');
-      //   })
-      //   .catch(e => {
-      //     res.render('500', {
-      //       error: `couldn't find current rating :(`
-      //     });
-      //   });
     }
   } catch (e) {
     console.log(e);
