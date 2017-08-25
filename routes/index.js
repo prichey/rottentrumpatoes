@@ -4,7 +4,7 @@ const low = require('lowdb');
 
 const approval = require('../lib/approval');
 
-const approvalDbPath = './tmp/approval.json';
+const approvalDbPath = './approval.json';
 const moviesDbPath = './movies.json';
 
 let approvalDb = low(approvalDbPath);

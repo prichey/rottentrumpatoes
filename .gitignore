@@ -1,6 +1,7 @@
 .env
 .DS_Store
 *.log
+approval.json
 node_modules/
 .node-persist/
 tmp/
