@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+  div.container
+    div.row
+      h2 Movies
+    div.row
+      ul
+        each moviesWithRating, i in movies
+          li
+            h4.index= i
+            ul.movies-with-rating
+              for movie in moviesWithRating
+                li.movie= `${JSON.stringify(movie)}`
+            
+        
+
+block scripts
+  script(src='js/lib/jquery.min.js')
+  script(src='js/main.bundle.js')
