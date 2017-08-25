@@ -11,7 +11,12 @@ let approvalDb = low(approvalDbPath);
 let moviesDb = low(moviesDbPath);
 
 function getRandomMovieWithRating(rating) {
-  const movies = moviesDb.get(rating).value();
+  const movies = moviesDb
+    .get(rating)
+    .sortBy('imdbVoteCount')
+    .reverse()
+    .take(20)
+    .value();
   return movies[Math.floor(Math.random() * movies.length)];
 }
 
