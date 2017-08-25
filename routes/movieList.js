@@ -10,6 +10,7 @@ function getConcattedMoviesArray(db) {
       .get(i)
       .sortBy('imdbVoteCount')
       .reverse()
+      .take(20)
       .value();
     if (!!moviesWithThisRating && moviesWithThisRating.length > 0) {
       movies[i] = moviesWithThisRating;
