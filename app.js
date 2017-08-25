@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const low = require('lowdb');
 
-require('./lib/db').init();
+// require('./lib/db').init();
 require('./lib/approval').init();
 
 const index = require('./routes/index');
