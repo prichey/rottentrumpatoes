@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node app.js",
-    "devStart": "nodemon app.js -i db/",
+    "devStart": "nodemon app.js -i db/ -i approval.json -i movies.json",
     "watch": "gulp watch",
     "dev": "npm-run-all --parallel devStart watch"
   },

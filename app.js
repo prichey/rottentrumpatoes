@@ -15,6 +15,7 @@ require('./lib/approval').init();
 
 const index = require('./routes/index');
 const scrape = require('./routes/scrape');
+const movieList = require('./routes/movieList');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -35,6 +36,7 @@ io.sockets.on('connection', function(socket) {
 
 app.use('/', index);
 app.use('/scrape', scrape);
+app.use('/movies', movieList);
 app.use('*', function(req, res) {
   res.redirect('/');
 });
