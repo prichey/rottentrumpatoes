@@ -1,19 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
+
 const moviesDb = low('./movies.json');
-
-const movies = getConcattedMoviesArray();
-
-function sortMoviesByVoteCount(movies) {
-  return movies;
-}
 
 function getConcattedMoviesArray() {
   const movies = [];
 
   for (let i = 0; i <= 100; i++) {
-    const moviesWithThisRating = moviesDb.get(i).value();
+    const moviesWithThisRating = moviesDb
+      .get(i)
+      .sortBy('imdbVoteCount')
+      .reverse()
+      .value();
     if (!!moviesWithThisRating && moviesWithThisRating.length > 0) {
       movies[i] = moviesWithThisRating;
     }
@@ -23,6 +22,8 @@ function getConcattedMoviesArray() {
 }
 
 router.get('/', function(req, res) {
+  const movies = getConcattedMoviesArray();
+
   res.render('movies', {
     movies: movies
   });
@@ -39,11 +40,9 @@ router.delete('/:movieId', function(req, res) {
 
     if (movieToRemove) {
       console.log(`Removing '${movieToRemove.title}'`);
+
       dbMoviesWithRating.remove(movieQuery).write(); // remove from ratings section
-      moviesDb.get('allMovies').remove(movieQuery).write(); // remove from allMovies
-
-      moviesDb.get('excludedMovies').push(movieId).write(); // add to excluded movies array
-
+      moviesDb.get('excludedMovies').push(movieToRemove).write(); // add to excluded movies array
       res.sendStatus(200);
     } else {
       // not found in db
