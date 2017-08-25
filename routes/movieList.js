@@ -35,13 +35,14 @@ router.delete('/:movieId', function(req, res) {
     const movieQuery = {
       movieDbId: movieId
     };
+    const movieToRemove = dbMoviesWithRating.find(movieQuery).value();
 
-    if (dbMoviesWithRating.find(movieQuery).value()) {
-      // delete from db
-      dbMoviesWithRating.remove(movieQuery).write();
+    if (movieToRemove) {
+      console.log(`Removing '${movieToRemove.title}'`);
+      dbMoviesWithRating.remove(movieQuery).write(); // remove from ratings section
+      moviesDb.get('allMovies').remove(movieQuery).write(); // remove from allMovies
 
-      // add to excluded movies array
-      moviesDb.get('excludedMovies').push(movieId).write();
+      moviesDb.get('excludedMovies').push(movieId).write(); // add to excluded movies array
 
       res.sendStatus(200);
     } else {
