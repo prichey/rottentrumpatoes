@@ -59,7 +59,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  var entries = ['./src/js/main.js', './src/js/scrape.js'];
+  var entries = [
+    './src/js/main.js',
+    './src/js/scrape.js',
+    './src/js/movieList.js'
+  ];
 
   var tasks = entries.map(function(entry) {
     var splitEntries = entry.split('/');

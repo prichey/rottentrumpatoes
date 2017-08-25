@@ -1,0 +1,18 @@
+table.movie-table.u-full-width.sortable
+  thead
+    tr
+      th Title
+      th Year
+      th Vote Count
+      th Poster Link
+      th Delete
+  tbody
+    for movie in moviesWithRating
+      tr(data-id=`${movie.movieDbId}` data-rt-rating=`${rating}`)
+        th= movie.title
+        th= movie.year
+        th= movie.imdbVoteCount
+        th
+          a(href=movie.posterUrl target='_blank') Poster
+        th
+          a.delete-movie(href='#') X

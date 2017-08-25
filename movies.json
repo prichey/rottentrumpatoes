@@ -1,94 +1,6 @@
 {
   "0": [
     {
-      "title": "Private Lessons",
-      "imdbId": "tt0082948",
-      "movieDbId": 41280,
-      "rtScore": 0,
-      "imdbScore": 5.1,
-      "imdbVoteCount": 2,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ5ZDA1MTAtOWQ0My00NjY5LThmNDQtOWQ5ZGY5ZmY1MmY3XkEyXkFqcGdeQXVyMjM2OTAxNg@@.jpg",
-      "timestamp": "2017-08-25T01:09:23.337Z",
-      "year": 1981
-    },
-    {
-      "title": "The Prince",
-      "imdbId": "tt1085492",
-      "movieDbId": 241254,
-      "rtScore": 0,
-      "imdbScore": 4.6,
-      "imdbVoteCount": 14,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA4ODEwOTAzNTReQTJeQWpwZ15BbWU4MDAzMDEyMTIx.jpg",
-      "timestamp": "2017-08-25T01:12:43.286Z",
-      "year": 2014
-    },
-    {
-      "title": "Sexual Chronicles of a French Family",
-      "imdbId": "tt1753584",
-      "movieDbId": 112160,
-      "rtScore": 0,
-      "imdbScore": 5.3,
-      "imdbVoteCount": 2,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM0Mjc3MDY0Ml5BMl5BanBnXkFtZTcwMDgwMzc4Nw@@.jpg",
-      "timestamp": "2017-08-25T01:15:27.020Z",
-      "year": 2012
-    },
-    {
-      "title": "The Disappointments Room",
-      "imdbId": "tt2364897",
-      "movieDbId": 293452,
-      "rtScore": 0,
-      "imdbScore": 3.9,
-      "imdbVoteCount": 5,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTE0MTE3MzI4ODFeQTJeQWpwZ15BbWU4MDI1MDI0ODkx.jpg",
-      "timestamp": "2017-08-25T01:16:49.948Z",
-      "year": 2016
-    },
-    {
-      "title": "Kronk's New Groove",
-      "imdbId": "tt0401398",
-      "movieDbId": 13417,
-      "rtScore": 0,
-      "imdbScore": 5.9,
-      "imdbVoteCount": 7,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ5NjQyOTU2MF5BMl5BanBnXkFtZTcwOTU0NjMzMQ@@.jpg",
-      "timestamp": "2017-08-25T01:22:03.192Z",
-      "year": 2005
-    },
-    {
-      "title": "The Villain",
-      "imdbId": "tt0080097",
-      "movieDbId": 163907,
-      "rtScore": 0,
-      "imdbScore": 5.4,
-      "imdbVoteCount": 5,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0MDEwNDcxOV5BMl5BanBnXkFtZTcwMzE1MjkxMQ@@.jpg",
-      "timestamp": "2017-08-25T01:23:59.115Z",
-      "year": 1979
-    },
-    {
-      "title": "House II: The Second Story",
-      "imdbId": "tt0093220",
-      "movieDbId": 37530,
-      "rtScore": 0,
-      "imdbScore": 5.4,
-      "imdbVoteCount": 8,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDNiZGI2OTctNDI5Ny00OWIxLTkxYTktY2Q3YTAxODFmM2RlXkEyXkFqcGdeQXVyMTQxNzMzNDI@.jpg",
-      "timestamp": "2017-08-25T01:24:20.165Z",
-      "year": 1987
-    },
-    {
-      "title": "The 11th Hour",
-      "imdbId": "tt3004746",
-      "movieDbId": 289191,
-      "rtScore": 0,
-      "imdbScore": 5.1,
-      "imdbVoteCount": 1,
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5Mzg2NzU3MV5BMl5BanBnXkFtZTgwOTMwNDQ3NTE@.jpg",
-      "timestamp": "2017-08-25T01:27:00.589Z",
-      "year": 2014
-    },
-    {
       "title": "Rest Stop",
       "imdbId": "tt0787505",
       "movieDbId": 9841,
@@ -73614,6 +73526,16 @@
       "timestamp": "2017-08-25T02:27:59.930Z",
       "year": 1966
     }
+  ],
+  "excludedMovies": [
+    41280,
+    112160,
+    241254,
+    293452,
+    13417,
+    163907,
+    37530,
+    289191
   ],
   "allMovies": [
     211672,

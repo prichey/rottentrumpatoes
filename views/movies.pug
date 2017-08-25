@@ -1,20 +1,19 @@
 extends layout.pug
 
+block header_scripts
+  script(src='js/lib/sorttable.js')
+
 block content
   div.container
     div.row
       h2 Movies
     div.row
-      ul
-        each moviesWithRating, i in movies
-          li
-            h4.index= i
-            ul.movies-with-rating
-              for movie in moviesWithRating
-                li.movie= `${JSON.stringify(movie)}`
-            
-        
+      ul.nl
+        each moviesWithRating, rating in movies
+          li.movie-rating-section
+            h4.index= `${rating}%`
+            include partials/movieTable.pug
 
-block scripts
+block footer_scripts
   script(src='js/lib/jquery.min.js')
-  script(src='js/main.bundle.js')
+  script(src='js/movieList.bundle.js')

@@ -35,3 +35,27 @@ ul.log {
     margin-bottom: 0;
   }
 }
+
+.vh {
+  @extend %visually-hidden;
+}
+
+.nl {
+  @extend %naked-list;
+}
+
+table.movie-table {
+  tr {
+    th:first-child {
+      width: 75%;
+    }
+  }
+}
+
+.movie-rating-section {
+  margin-bottom: 5rem;
+
+  h4 {
+    margin-bottom: 0;
+  }
+}
