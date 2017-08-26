@@ -1,6 +1,14 @@
 html,
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Rubik', sans-serif;
 }
 
 main {
@@ -27,6 +35,10 @@ img.poster {
   height: 75vh;
   margin: 0 auto;
   display: block;
+}
+
+.container {
+  max-width: 60rem;
 }
 
 ul.log {

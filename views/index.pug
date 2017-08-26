@@ -2,11 +2,12 @@ extends layout.pug
 
 block content
   div.container
+    h2 Rotten Trumpatoes
+    //- h4 Donald Trump currently has an approval rating of #{rating}%#[sup  #[a *]].
     div.row
-      h3 Donald Trump currently has an approval rating of #{rating}%#[sup  #[a *]].
-    div.row
+      p According to RealClearPolitics, Donald Trump currently has an approval rating of #{rating}%.#[sup #[a *]]
+      p That's the same rating that #{movie.title} (#{movie.year}) has on Rotten Tomatoes.
       img.poster(src=movie.posterUrl)
-      h4 That's the same as #{movie.title} (#{movie.year}).
 
 block footer_scripts
   script(src='js/lib/jquery.min.js')
