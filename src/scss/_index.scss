@@ -9,6 +9,7 @@ h3,
 h4,
 h5 {
   font-family: 'Rubik', sans-serif;
+  margin-bottom: 0.5em;
 }
 
 main {
@@ -39,6 +40,14 @@ img.poster {
 
 .container {
   max-width: 60rem;
+}
+
+.row {
+  margin-bottom: 5rem;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 ul.log {
