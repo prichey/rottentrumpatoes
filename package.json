@@ -1,5 +1,5 @@
 {
-  "name": "rotten trumpatoes",
+  "name": "rottentrumpatoes",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -31,6 +31,7 @@
     "omdb": "^0.8.0",
     "path": "^0.12.7",
     "pug": "^2.0.0-beta11",
+    "puppeteer": "^0.10.1",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
