@@ -1,16 +1,28 @@
 extends layout.pug
 
 block content
-  div.container
-    h2 Rotten Trumpatoes
-    //- h4 Donald Trump currently has an approval rating of #{rating}%#[sup  #[a *]].
-    div.row
-      p According to RealClearPolitics, Donald Trump currently has an approval rating of #{rating}%.#[sup #[a *]]
-      p That's the same rating that #{movie.title} (#{movie.year}) has on Rotten Tomatoes.
+  div.main-content
+    section.row.section-approval
+      p Donald Trump currently has an approval rating of #[span.rating= `${rating}%`].#[sup #[a(href="") *]]
+    section.row.section-poster
       img.poster(src=movie.posterUrl)
-    div.row
-      h4 What is this?
-      p This stupid site was made by #[a(href="#") Preston Richey] and was inspired by #[a(href="https://twitter.com/PJVogt/status/895824447113842689") this tweet] by #[a(href="https://twitter.com/PJVogt/") PJ Vogt]. ¯\_(ツ)_/¯
+    section.row.section-movie
+      p That's the same rating that #[a(href="#")= `${movie.title} (${movie.year})`] has on Rotten Tomatoes.
+  nav.links-wrap
+    ul.nl.nav-links
+      li#share-link(data-section-link="share")
+        a(href="#") Share
+      li#what-link(data-section-link="what")
+        a(href="#") What
+      li#who-link(data-section-link="who")
+        a(href="#") Who
+    ul.nl.nav-sections
+      li#share-link
+        a(href="#") Share
+      li#what-link
+        a(href="#") What
+      li#who-link
+        a(href="#") Who
 
 block footer_scripts
   script(src='js/lib/jquery.min.js')
