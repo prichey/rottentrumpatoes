@@ -29,8 +29,8 @@ router.get('/', function(req, res) {
     const ratingObj = approvalDb.get('rating').value();
 
     if (!!ratingObj) {
-      const rating = parseInt(ratingObj.val);
-      const movie = getRandomMovieWithRating(rating);
+      const rating = ratingObj.val;
+      const movie = getRandomMovieWithRating(parseInt(rating));
       if (!!movie) {
         res.render('index', {
           rating: rating,
