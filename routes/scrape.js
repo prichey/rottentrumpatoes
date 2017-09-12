@@ -3,8 +3,10 @@ const router = express.Router();
 const low = require('lowdb');
 const io = require('./../app').io;
 
+const puppeteer = require('puppeteer');
+
 // require('../lib/movie')();
-const scrapeMovies = require('../lib/movie.js').scrapeMovies;
+const asyncScrapeMovies = require('../lib/movie.js').asyncScrapeMovies;
 
 router.get('*', function(req, res) {
   try {
@@ -17,7 +19,13 @@ router.get('*', function(req, res) {
       });
 
       const socket = io.sockets.in('foo');
-      scrapeMovies(pageFrom, pageTo, socket);
+      try {
+        asyncScrapeMovies(pageFrom, pageTo, socket).catch(err => {
+          console.log(err.message);
+        });
+      } catch (e) {
+        console.log(e);
+      }
     } else {
       res.redirect('/');
     }

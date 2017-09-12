@@ -10,9 +10,10 @@ block content
     section.row
       ul.nl
         each moviesWithRating, rating in movies
-          li.movie-rating-section
-            h4.index= `${rating}%`
-            include partials/movieTable.pug
+          if moviesWithRating
+            li.movie-rating-section
+              h4.index= `${rating}%`
+              include partials/movieTable.pug
 
 block footer_scripts
   script(src='js/lib/jquery.min.js')
