@@ -1,23 +1,15 @@
 extends layout.pug
 
 block content
-  div.main-content.row.nopacity
-    section.column.one-third.section-approval
-      p#approval-copy.section-content Donald Trump currently has an approval rating of 
-        span.rating= `${rating}%.`
-          a.boxless.rating-link(href="https://projects.fivethirtyeight.com/trump-approval-ratings/" target="_blank") *
-    section.column.one-third.section-poster
-      img#poster.section-content(src=movie.posterUrl)
-    section.column.one-third.section-movie
-      p.section-content That's about the same as #[a(href=`${movie.rtUrl}` target="_blank")= `${movie.title} (${movie.year})`] on Rotten Tomatoes.
-  nav.links-wrap.vh
+  nav.links-wrap
     ul.nl.nav-links
       li#share-link(data-section-link="share")
-        a(href="#") Share
+        //- object.icon.icon-share(type='image/svg+xml' data='/img/icon/share.svg')
+        img.icon.icon-share(src='/img/icon/share.svg' alt='Share')
       li#what-link(data-section-link="what")
-        a(href="#") What
+        img.icon.icon-what(src='/img/icon/what.svg' alt='What?')
       li#who-link(data-section-link="who")
-        a(href="#") Who
+        img.icon.icon-who(src='/img/icon/who.svg' alt='Who?')
     ul.nl.nav-sections.vh
       li#share-link(data-section="share")
         div.section.share-section
@@ -30,6 +22,15 @@ block content
         div.section.who-section
           p
             RottenTrumpatoes was made by #[a(href="") Preston Richey] and #[a(href="") Tanya Karpitskiy]
+  div.main-content.row.nopacity
+    section.column.one-third.section-approval
+      p#approval-copy.section-content Donald Trump currently has an approval rating of 
+        span.rating= `${rating}%.`
+          a.boxless.rating-link(href="https://projects.fivethirtyeight.com/trump-approval-ratings/" target="_blank") *
+    section.column.one-third.section-poster
+      img#poster.section-content(src=movie.posterUrl)
+    section.column.one-third.section-movie
+      p.section-content That's about the same as #[a(href=`${movie.rtUrl}` target="_blank")= `${movie.title} (${movie.year})`] on Rotten Tomatoes.
 
 block footer_scripts
   script(src='js/lib/jquery.min.js')
