@@ -12,7 +12,8 @@ router.get('*', function(req, res) {
     if (!!pageFrom && !!pageTo && pageTo >= pageFrom) {
       res.render('scrape', {
         pageFrom: pageFrom,
-        pageTo: pageTo
+        pageTo: pageTo,
+        bodyId: 'scrape'
       });
 
       const socket = io.sockets.in('foo');

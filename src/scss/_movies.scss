@@ -1,0 +1,31 @@
+body#movies {
+  // html,
+  // body {
+  //   font-family: 'Roboto Mono', monospace;
+  // }
+  //
+  // h1,
+  // h2,
+  // h3,
+  // h4,
+  // h5 {
+  //   font-family: 'Rubik', sans-serif;
+  //   margin-bottom: 0.5em;
+  // }
+
+  table.movie-table {
+    tr {
+      th:first-child {
+        width: 75%;
+      }
+    }
+  }
+
+  .movie-rating-section {
+    margin-bottom: 5rem;
+
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -25,7 +25,8 @@ router.get('/', function(req, res) {
   const movies = getConcattedMoviesArray(moviesDb);
 
   res.render('movies', {
-    movies: movies
+    movies: movies,
+    bodyId: 'movies'
   });
 });
 

@@ -34,7 +34,8 @@ router.get('/', function(req, res) {
       if (!!movie) {
         res.render('index', {
           rating: rating,
-          movie: movie
+          movie: movie,
+          bodyId: 'index'
         });
       } else {
         res.render('500', {
