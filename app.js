@@ -13,10 +13,6 @@ const low = require('lowdb');
 require('./lib/db').init();
 require('./lib/approval').init();
 
-const index = require('./routes/index');
-const scrape = require('./routes/scrape');
-const movieList = require('./routes/movieList');
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -28,15 +24,18 @@ http.listen(port, function() {
   console.log('Server running on port ' + port);
 });
 
-io.sockets.on('connection', function(socket) {
-  socket.on('join', function(data) {
-    socket.join(data.uuid); // join client room to transmit data to
+if (process.env.NODE_ENV === 'dev') {
+  io.sockets.on('connection', function(socket) {
+    socket.on('join', function(data) {
+      socket.join(data.uuid); // join client room to transmit data to
+    });
   });
-});
 
-app.use('/', index);
-app.use('/scrape', scrape);
-app.use('/movies', movieList);
+  app.use('/scrape', require('./routes/scrape'));
+  app.use('/movies', require('./routes/movieList'));
+}
+
+app.use('/', require('./routes/index'));
 app.use('*', function(req, res) {
   res.redirect('/');
 });
