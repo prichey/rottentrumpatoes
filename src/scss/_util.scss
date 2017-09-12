@@ -49,6 +49,12 @@ ul.log {
   }
 }
 
-.skinny-container {
-  max-width: 60rem;
+.container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @media (min-width: $mobileWidth) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
 }

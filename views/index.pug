@@ -5,11 +5,11 @@ block content
     section.column.one-third.section-approval
       p#approval-copy.section-content Donald Trump currently has an approval rating of 
         span.rating= `${rating}%.`
-          a.boxless.rating-link(href="https://projects.fivethirtyeight.com/trump-approval-ratings/") *
+          a.boxless.rating-link(href="https://projects.fivethirtyeight.com/trump-approval-ratings/" target="_blank") *
     section.column.one-third.section-poster
       img#poster.section-content(src=movie.posterUrl)
     section.column.one-third.section-movie
-      p.section-content That's about the same as #[a(href="#")= `${movie.title} (${movie.year})`] on Rotten Tomatoes.
+      p.section-content That's about the same as #[a(href=`${movie.rtUrl}` target="_blank")= `${movie.title} (${movie.year})`] on Rotten Tomatoes.
   nav.links-wrap.vh
     ul.nl.nav-links
       li#share-link(data-section-link="share")
