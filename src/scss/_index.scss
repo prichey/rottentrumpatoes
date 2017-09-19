@@ -1,5 +1,6 @@
 body#index {
   font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
 
   @media (min-width: $mobileWidth) {
     position: absolute;
@@ -49,6 +50,7 @@ body#index {
   .main-content {
     height: 100%;
     transition: opacity 250ms;
+    // opacity: 0;
 
     section {
       height: 100%;
@@ -80,13 +82,20 @@ body#index {
     .icon {
       display: block;
       width: 4rem;
+      transition: fill 125ms;
     }
 
     li {
       position: absolute;
       margin: 0;
       cursor: pointer;
-      z-index: 5;
+      z-index: 20;
+
+      &.active {
+        .icon {
+          fill: $yellow;
+        }
+      }
     }
 
     #share-link {
@@ -105,16 +114,70 @@ body#index {
     }
   }
 
-  .section-approval {
-    #approval-copy {
+  .nav-sections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    li {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &.active {
+        display: block;
+        z-index: 10;
+      }
+    }
+
+    .section {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-transform: uppercase;
       font-size: 2.4rem;
+      height: 50%;
 
       @media (min-width: $mobileWidth) {
         font-size: 2.8rem;
       }
 
       @media (min-width: 1200px) {
-        font-size: 4rem;
+        font-size: 3.6rem;
+      }
+    }
+
+    .section-content {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+
+    .section-close {
+      width: 4rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+
+  .section-approval {
+    #approval-copy {
+      font-size: 2.4rem;
+      line-height: 1.4em;
+
+      @media (min-width: $mobileWidth) {
+        font-size: 2.8rem;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 3.6rem;
       }
     }
 
@@ -151,7 +214,7 @@ body#index {
       }
 
       @media (min-width: 1200px) {
-        font-size: 3.6rem;
+        font-size: 3.2rem;
       }
     }
   }

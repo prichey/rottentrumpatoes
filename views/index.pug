@@ -5,23 +5,28 @@ block content
     ul.nl.nav-links
       li#share-link(data-section-link="share")
         //- object.icon.icon-share(type='image/svg+xml' data='/img/icon/share.svg')
-        img.icon.icon-share(src='/img/icon/share.svg' alt='Share')
+        //- img.icon.icon-share(src='/img/icon/share.svg' alt='Share')
+        include icons/share.pug
       li#what-link(data-section-link="what")
-        img.icon.icon-what(src='/img/icon/what.svg' alt='What?')
+        //- img.icon.icon-what(src='/img/icon/what.svg' alt='What?')
+        include icons/what.pug
       li#who-link(data-section-link="who")
-        img.icon.icon-who(src='/img/icon/who.svg' alt='Who?')
-    ul.nl.nav-sections.vh
-      li#share-link(data-section="share")
-        div.section.share-section
+        //- img.icon.icon-who(src='/img/icon/who.svg' alt='Who?')
+        include icons/who.pug
+    ul.nl.nav-sections
+      li#share-section(data-section="share")
+        div.section.column.one-third
           Share
-      li#what-link(data-section="what")
-        div.section.what-section
-          p
-            RottenTrumpatoes was inspired by #[a(href="https://twitter.com/PJVogt/status/895824447113842689") this tweet] by #[a(href="https://twitter.com/PJVogt") PJ Vogt]
-      li#who-link(data-section="who")
-        div.section.who-section
-          p
-            RottenTrumpatoes was made by #[a(href="") Preston Richey] and #[a(href="") Tanya Karpitskiy]
+      li#what-section(data-section="what")
+        div.section.column.one-half
+          p.section-content This stupid site was inspired #[br ] by #[a(href="https://twitter.com/PJVogt/status/895824447113842689") this tweet] from #[a(href="https://twitter.com/PJVogt") PJ Vogt]
+          //- img.section-close(src='/img/icon/close.svg')
+          include icons/close.pug
+      li#who-section(data-section="who")
+        div.section.column.one-half
+          p.section-content This site was made by #[a(href="") Preston Richey]#[br ] and designed by #[a(href="") Tanya Karpitskiy]
+          //- img.section-close(src='/img/icon/close.svg')
+          include icons/close.pug
   div.main-content.row.nopacity
     section.column.one-third.section-approval
       p#approval-copy.section-content Donald Trump currently has an approval rating of 
