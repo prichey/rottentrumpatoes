@@ -9,11 +9,7 @@ html
     link(rel='stylesheet', href='/main.css')
     include partials/favicon.pug
     include partials/analytics.pug
-    meta(property='og:title', content='')
-    meta(property='og:description', content='')
-    meta(property='og:type', content='website')
-    meta(property='og:image', content='')
-    meta(property='og:url', content= '')
+    include partials/socialMeta.pug
     block header_scripts
   body(id=`${bodyId}`)
     main
