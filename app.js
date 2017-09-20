@@ -20,13 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const port = process.env.PORT || 3000;
-http.listen(port, function() {
+http.listen(port, () => {
   console.log('Server running on port ' + port);
 });
 
 if (process.env.NODE_ENV === 'dev') {
-  io.sockets.on('connection', function(socket) {
-    socket.on('join', function(data) {
+  io.sockets.on('connection', socket => {
+    socket.on('join', data => {
       socket.join(data.uuid); // join client room to transmit data to
     });
   });
@@ -36,6 +36,6 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 app.use('/', require('./routes/index'));
-app.use('*', function(req, res) {
+app.use('*', (req, res) => {
   res.redirect('/');
 });
