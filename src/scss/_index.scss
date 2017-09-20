@@ -35,7 +35,7 @@ body#index {
   }
 
   main {
-    padding: 1.5rem;
+    padding: 2.5rem;
     max-width: 1400px;
     margin: 0 auto;
 
@@ -65,7 +65,10 @@ body#index {
   }
 
   .links-wrap {
+    display: none;
+
     @media (min-width: $mobileWidth) {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
