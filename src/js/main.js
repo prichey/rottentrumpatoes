@@ -11,6 +11,15 @@ const $whatButton = $('#what-link');
 const $closeSectionButton = $('.section-close');
 const $mainContent = $('.main-content');
 
+function hookUpEscapeClose() {
+  $(document).keyup(function(e) {
+    // escape key
+    if (e.keyCode == 27) {
+      closeActiveModals();
+    }
+  });
+}
+
 function closeActiveModals() {
   $('.nav-sections li.active').removeClass('active');
   $('.nav-links li.active').removeClass('active');
@@ -107,6 +116,7 @@ function fixApprovalCopyHeight() {
 function run() {
   fixApprovalCopyHeight();
   hookUpButtonsClick();
+  hookUpEscapeClose();
 }
 
 $(window).on('load', () => {
