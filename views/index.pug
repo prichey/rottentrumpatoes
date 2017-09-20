@@ -14,15 +14,23 @@ block content
         //- img.icon.icon-who(src='/img/icon/who.svg' alt='Who?')
         include icons/who.pug
     ul.nl.nav-sections
-      li#share-section(data-section="share")
+      li#share-section.nav-section(data-section="share")
         div.section.column.one-third
-          Share
-      li#what-section(data-section="what")
+          div.section-content
+            p.section-title Share
+            ul.links.nl
+              li
+                a(href="http://twitter.com/share?text=Rotten%20Trumpatoes&url=https://rottentrumpatoes.com", target="_blank") Twitter
+              li
+                a(href="http://www.facebook.com/share.php?u=https://rottentrumpatoes.com&amp;title=Rotten%20Trumpatoes", target="_blank") Facebook
+          //- img.section-close(src='/img/icon/close.svg')
+          include icons/close.pug
+      li#what-section.nav-section(data-section="what")
         div.section.column.one-half
           p.section-content This stupid site was inspired #[br ] by #[a(href="https://twitter.com/PJVogt/status/895824447113842689") this tweet] from #[a(href="https://twitter.com/PJVogt") PJ Vogt]
           //- img.section-close(src='/img/icon/close.svg')
           include icons/close.pug
-      li#who-section(data-section="who")
+      li#who-section.nav-section(data-section="who")
         div.section.column.one-half
           p.section-content This site was made by #[a(href="") Preston Richey]#[br ] and designed by #[a(href="") Tanya Karpitskiy]
           //- img.section-close(src='/img/icon/close.svg')

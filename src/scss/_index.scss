@@ -121,7 +121,26 @@ body#index {
     width: 100%;
     height: 100%;
 
-    li {
+    #share-section {
+      text-align: left;
+
+      .section-title {
+        text-align: left;
+      }
+
+      .links {
+        text-align: right;
+
+        li {
+          display: inline-block;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    .nav-section {
       display: none;
       position: absolute;
       width: 100%;
