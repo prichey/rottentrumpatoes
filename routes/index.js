@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const low = require('lowdb');
+const moment = require('moment');
 
 const approval = require('../lib/approval');
 
@@ -34,6 +35,7 @@ router.get('/', function(req, res) {
       if (!!movie) {
         res.render('index', {
           rating: rating,
+          ratingDate: moment(ratingObj.timestamp).format('LT l'),
           movie: movie,
           bodyId: 'index'
         });
