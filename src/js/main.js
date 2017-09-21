@@ -11,6 +11,15 @@ const $whatButton = $('#what-link');
 const $closeSectionButton = $('.section-close');
 const $mainContent = $('.main-content');
 
+function hookUpClickTapTouch() {
+  $('.nav-section').on('click tap touch', function(e) {
+    // if not a link, close the modal
+    if ($(e.target).is('a') !== true) {
+      closeActiveModals();
+    }
+  });
+}
+
 function hookUpEscapeClose() {
   $(document).keyup(function(e) {
     // escape key
@@ -30,7 +39,6 @@ function hookUpShareButtonClick() {
   $shareButton.on('click tap touch', e => {
     e.preventDefault();
 
-    console.log('share');
     const $shareLink = $(`[data-section-link='share']`);
     const $shareSection = $(`[data-section='share']`);
 
@@ -51,7 +59,6 @@ function hookUpWhoButtonClick() {
   $whoButton.on('click tap touch', function(e) {
     e.preventDefault();
 
-    console.log('who');
     const $whoLink = $(`[data-section-link='who']`);
     const $whoSection = $(`[data-section='who']`);
 
@@ -72,7 +79,6 @@ function hookUpWhatButtonClick() {
   $whatButton.on('click tap touch', function(e) {
     e.preventDefault();
 
-    console.log('what');
     const $whatLink = $(`[data-section-link='what']`);
     const $whatSection = $(`[data-section='what']`);
 
@@ -117,11 +123,12 @@ function run() {
   fixApprovalCopyHeight();
   hookUpButtonsClick();
   hookUpEscapeClose();
+  hookUpClickTapTouch();
+  $('.main-content').removeClass('nopacity');
 }
 
 $(window).on('load', () => {
   run();
-  $('.main-content').removeClass('nopacity');
 });
 
 window.onresize = throttle(250, () => {
