@@ -14,7 +14,7 @@ The DB was created by scraping 150 pages of the [TMDb](https://www.themoviedb.or
 
 ---
 
-## Deploying
+## Deployment
 [Mostly for my own reference, I have no idea why you would want to do this.]
 
 #### Dokku
