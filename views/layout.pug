@@ -9,7 +9,8 @@ html
     link(rel='stylesheet', href='/main.css')
     include partials/favicon.pug
     include partials/analytics.pug
-    include partials/socialMeta.pug
+    if movie
+      include partials/socialMeta.pug
     block header_scripts
   body(id=`${bodyId}`)
     main
