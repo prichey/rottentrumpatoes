@@ -2,6 +2,8 @@
 
 A stupid project inspired by [a tweet](https://twitter.com/PJVogt/status/895824447113842689).
 
+![screenshot](public/img/screenshot.png)
+
 ---
 
 ## How
