@@ -27,7 +27,5 @@ I use [dotenv](https://github.com/motdotla/dotenv), which relies on a `.env` at 
 ```
 MOVIEDB_API_KEY=foo
 OMDB_API_KEY=bar
-FB_APP_SECRET=baz
-FB_APP_ID=qux
 ```
-Instructions to get a MovieDB API key are [here](https://developers.themoviedb.org/3/getting-started/authentication) and you can get an OMDB API key [here](http://www.omdbapi.com/apikey.aspx). The `FB_APP_SECRET` and `FB_APP_ID` aren't technically necessary, but 1. Facebook Open Graph debugger complains if you don't include the app ID in the meta, and 2. I attempt to force Facebook to rescrape the OG data every time I update the approval rating (like [this](https://github.com/prichey/rottentrumpatoes/blob/master/lib/fb.js#L25-L38) as per [this](https://stackoverflow.com/a/12101700/2777986)). I'm not even sure it works reliably, but it doesn't fail so for the moment I'm leaving it in.
+Instructions to get a MovieDB API key are [here](https://developers.themoviedb.org/3/getting-started/authentication) and you can get an OMDB API key [here](http://www.omdbapi.com/apikey.aspx).
