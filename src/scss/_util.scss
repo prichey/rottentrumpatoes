@@ -32,6 +32,11 @@
 
 .nopacity {
   opacity: 0;
+  display: none;
+
+  @media (min-width: $mobileWidth) {
+    display: inherit;
+  }
 }
 
 ul.log {

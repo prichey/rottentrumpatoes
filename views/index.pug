@@ -3,13 +3,21 @@ extends layout.pug
 block content
   nav.links-wrap
     ul.nl.nav-links
-      li#share-link(data-section-link="share")
-        include icons/share.pug
       li#what-link(data-section-link="what")
         include icons/what.pug
       li#who-link(data-section-link="who")
         include icons/who.pug
+      li#share-link(data-section-link="share")
+        include icons/share.pug
     ul.nl.nav-sections
+      li#what-section.nav-section(data-section="what")
+        div.section.column.one-half
+          p.section-content Rotten Trumpatoes was #[br ]inspired by #[a(href="https://twitter.com/PJVogt/status/895824447113842689" target="_blank") a tweet].
+          include icons/close.pug
+      li#who-section.nav-section(data-section="who")
+        div.section.column.one-half
+          p.section-content Rotten Trumpatoes was #[br ]made by #[a(href="https://twitter.com/prestonrichey" target="_blank") Preston Richey] and #[br ]designed by #[a(href="http://www.tanyakarpitskiy.com/" target="_blank") Tanya Karpitskiy].
+          include icons/close.pug
       li#share-section.nav-section(data-section="share")
         div.section.column.one-half
           div.section-content
@@ -19,14 +27,6 @@ block content
                 a(href="http://twitter.com/share?url=https://rottentrumpatoes.com" target="_blank") Twitter
               li
                 a(href="http://www.facebook.com/share.php?u=https://rottentrumpatoes.com&amp;title=Rotten%20Trumpatoes" target="_blank") Facebook
-          include icons/close.pug
-      li#what-section.nav-section(data-section="what")
-        div.section.column.one-half
-          p.section-content Rotten Trumpatoes was #[br ]inspired by #[a(href="https://twitter.com/PJVogt/status/895824447113842689" target="_blank") a tweet].
-          include icons/close.pug
-      li#who-section.nav-section(data-section="who")
-        div.section.column.one-half
-          p.section-content Rotten Trumpatoes was #[br ]made by #[a(href="https://twitter.com/prestonrichey" target="_blank") Preston Richey] and #[br ]designed by #[a(href="http://www.tanyakarpitskiy.com/" target="_blank") Tanya Karpitskiy].
           include icons/close.pug
   div.main-content.row.nopacity
     section.column.one-third.section-approval
