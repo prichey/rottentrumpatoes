@@ -6,7 +6,7 @@ block header_scripts
 block content
   div.container
     section.row.header
-      h2 Movies
+      h2= `Total Movies: ${numMovies}`
     section.row
       ul.nl
         each moviesWithRating, rating in movies
