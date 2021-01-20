@@ -38,7 +38,7 @@
     "puppeteer": "^0.10.2",
     "qs": "^6.5.1",
     "range": "0.0.3",
-    "socket.io": "^2.0.3",
+    "socket.io": "^2.4.0",
     "urlencode": "^1.1.0"
   },
   "devDependencies": {
